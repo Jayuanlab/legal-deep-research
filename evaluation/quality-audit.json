@@ -1,0 +1,20 @@
+{
+  "unique_queries": 400,
+  "unique_sources": {
+    "law": 118,
+    "case": 100
+  },
+  "near_duplicate_family_pairs": [],
+  "original_rows_unchanged": true,
+  "all_qrel_anchors_match": true,
+  "new_case_families": 76,
+  "new_law_families": 76,
+  "query_specific_case_anchors": true,
+  "law_second_query_anchor_overrides": 15,
+  "seed_files_sha256": {
+    "expansion/law_seeds.py": "a87103936720564d48ad50bac7d35663384b71c0f379dc196d3e0f06f23ffa06",
+    "expansion/case-research-a.md": "69528d184e6d3f9740af0db0755116ce91e59d102778eaf881bd694b944bb826",
+    "expansion/case-research-b.md": "626c3e8cd37aae4187ec7bdc00080b6f218e6a59fa90373f7696d8debb2ec0fd"
+  },
+  "repeated_source_notice": "来源内两种问法相关，不能按400个独立案件计算统计置信度"
+}

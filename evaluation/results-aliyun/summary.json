@@ -1,0 +1,1162 @@
+{
+  "created_at": "2026-11-12T14:24:37.767238+00:00",
+  "dataset": {
+    "version": "retrieval-v2",
+    "rows": 400,
+    "laws": 200,
+    "cases": 176,
+    "controls": 24,
+    "dataset_sha256": "ec3a4c295bc5db75ac123d7e1affde980df652ce5846526e665dcb4a51370492",
+    "corpus_sha256": "e2f9a10263b0ebd6dad35ed4e9a863696a6f1cc0ffba04cf1c99e0a32dd894c0",
+    "corpus_counts": {
+      "law": 2314,
+      "case": 278
+    },
+    "split_counts": {
+      "dev": 139,
+      "test": 237,
+      "control": 24
+    },
+    "cohort_counts": {
+      "regression_v1": 80,
+      "expansion_v2": 320
+    },
+    "unique_qrel_sources": {
+      "law": 118,
+      "case": 100
+    },
+    "labeling": "原文锚点校验与来源核对，未经独立法律专家穷尽相关性评审；查询非被测语言模型生成，未使用自动模型评分",
+    "split_policy": "保留v1全部原题和分组；共享任一qrel的查询按来源连通分量分组，dev/test无qrel交集。新增题由同一来源两种问法构成，题数不能当作独立来源数。新题单独标记expansion_v2。"
+  },
+  "evaluated_rows": 400,
+  "embedding_identity": "3c71d7266ffd8471abf0cf2b5d567938a35a0192fd3d8994de8f01755c31e8ee",
+  "embedding_model": "text-embedding-v4",
+  "dimensions": 1024,
+  "query_cache": "query_vectors-3c71d7266ffd.json",
+  "cohorts": [
+    {
+      "cohort": "expansion_v2",
+      "collection": "law",
+      "method": "bm25",
+      "queries": 152,
+      "k": 4,
+      "hit_at_1": 0.6842105263157895,
+      "hit_at_k": 0.8486842105263158,
+      "known_recall_at_k": 0.8421052631578947,
+      "mrr_at_k": 0.7604166666666666,
+      "known_ndcg_at_k": 0.7781287237831148,
+      "anchor_recall_at_k": null
+    },
+    {
+      "cohort": "expansion_v2",
+      "collection": "law",
+      "method": "vector",
+      "queries": 152,
+      "k": 4,
+      "hit_at_1": 0.756578947368421,
+      "hit_at_k": 0.9539473684210527,
+      "known_recall_at_k": 0.9473684210526315,
+      "mrr_at_k": 0.8410087719298246,
+      "known_ndcg_at_k": 0.865635730898448,
+      "anchor_recall_at_k": 0.9473684210526315
+    },
+    {
+      "cohort": "expansion_v2",
+      "collection": "law",
+      "method": "hybrid",
+      "queries": 152,
+      "k": 4,
+      "hit_at_1": 0.756578947368421,
+      "hit_at_k": 0.9276315789473685,
+      "known_recall_at_k": 0.9210526315789473,
+      "mrr_at_k": 0.8300438596491229,
+      "known_ndcg_at_k": 0.8519302685904326,
+      "anchor_recall_at_k": 0.9210526315789473
+    },
+    {
+      "cohort": "expansion_v2",
+      "collection": "case",
+      "method": "bm25",
+      "queries": 152,
+      "k": 2,
+      "hit_at_1": 0.9868421052631579,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.993421052631579,
+      "known_ndcg_at_k": 0.9951438125469929,
+      "anchor_recall_at_k": null
+    },
+    {
+      "cohort": "expansion_v2",
+      "collection": "case",
+      "method": "vector",
+      "queries": 152,
+      "k": 2,
+      "hit_at_1": 0.9407894736842105,
+      "hit_at_k": 0.9868421052631579,
+      "known_recall_at_k": 0.9868421052631579,
+      "mrr_at_k": 0.9638157894736842,
+      "known_ndcg_at_k": 0.9698454491776329,
+      "anchor_recall_at_k": 0.631578947368421
+    },
+    {
+      "cohort": "expansion_v2",
+      "collection": "case",
+      "method": "hybrid",
+      "queries": 152,
+      "k": 2,
+      "hit_at_1": 0.9539473684210527,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.9769736842105263,
+      "known_ndcg_at_k": 0.983003343914475,
+      "anchor_recall_at_k": 0.6447368421052632
+    },
+    {
+      "cohort": "regression_v1",
+      "collection": "law",
+      "method": "bm25",
+      "queries": 48,
+      "k": 4,
+      "hit_at_1": 0.6458333333333334,
+      "hit_at_k": 0.8958333333333334,
+      "known_recall_at_k": 0.8854166666666666,
+      "mrr_at_k": 0.7621527777777778,
+      "known_ndcg_at_k": 0.7899087070124842,
+      "anchor_recall_at_k": null
+    },
+    {
+      "cohort": "regression_v1",
+      "collection": "law",
+      "method": "vector",
+      "queries": 48,
+      "k": 4,
+      "hit_at_1": 0.75,
+      "hit_at_k": 0.9791666666666666,
+      "known_recall_at_k": 0.9444444444444444,
+      "mrr_at_k": 0.8420138888888888,
+      "known_ndcg_at_k": 0.866015206437981,
+      "anchor_recall_at_k": 0.9444444444444444
+    },
+    {
+      "cohort": "regression_v1",
+      "collection": "law",
+      "method": "hybrid",
+      "queries": 48,
+      "k": 4,
+      "hit_at_1": 0.75,
+      "hit_at_k": 0.9583333333333334,
+      "known_recall_at_k": 0.9583333333333334,
+      "mrr_at_k": 0.8472222222222222,
+      "known_ndcg_at_k": 0.8769927566967868,
+      "anchor_recall_at_k": 0.9583333333333334
+    },
+    {
+      "cohort": "regression_v1",
+      "collection": "case",
+      "method": "bm25",
+      "queries": 24,
+      "k": 2,
+      "hit_at_1": 1.0,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "known_ndcg_at_k": 1.0,
+      "anchor_recall_at_k": null
+    },
+    {
+      "cohort": "regression_v1",
+      "collection": "case",
+      "method": "vector",
+      "queries": 24,
+      "k": 2,
+      "hit_at_1": 1.0,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "known_ndcg_at_k": 1.0,
+      "anchor_recall_at_k": 0.5416666666666666
+    },
+    {
+      "cohort": "regression_v1",
+      "collection": "case",
+      "method": "hybrid",
+      "queries": 24,
+      "k": 2,
+      "hit_at_1": 1.0,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "known_ndcg_at_k": 1.0,
+      "anchor_recall_at_k": 0.5416666666666666
+    }
+  ],
+  "slices": [
+    {
+      "field": "domain",
+      "value": "一般保证执行",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "专项维修资金",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "个人信息",
+      "queries": 26,
+      "known_recall_at_k": 0.9230769230769231,
+      "hit_at_k": 0.9230769230769231
+    },
+    {
+      "field": "domain",
+      "value": "个人信息犯罪",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "买卖",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "互联网反垄断",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "交通肇事因果关系",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "人工授精继承",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "人格权",
+      "queries": 6,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "人防征费",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "仲裁协议成立",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "使用武器赔偿",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "侵权",
+      "queries": 9,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "保证金质押",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "信息公开期限",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "信息公开检索",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "债权人代位权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "光污染责任",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "公司",
+      "queries": 20,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "公司决议",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "公益诉讼调解审查",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "关联企业破产",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "刑事国家赔偿",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "到期债权执行",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "劳动",
+      "queries": 42,
+      "known_recall_at_k": 0.9166666666666666,
+      "hit_at_k": 0.9285714285714286
+    },
+    {
+      "field": "domain",
+      "value": "危险物质犯罪",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "危险驾驶",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "合同",
+      "queries": 43,
+      "known_recall_at_k": 0.8953488372093024,
+      "hit_at_k": 0.9069767441860465
+    },
+    {
+      "field": "domain",
+      "value": "合同诈骗量刑",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "商品包装竞争",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "围填海处罚",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "大气污染公益诉讼",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "姓名权与商标",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "婚姻家庭",
+      "queries": 10,
+      "known_recall_at_k": 0.9,
+      "hit_at_k": 0.9
+    },
+    {
+      "field": "domain",
+      "value": "学位行政诉讼",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "小区车位拍卖",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "工程优先权放弃",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "工程款优先权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "平台劳动关系",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "影视著作权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "微信群名誉侵权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "执行",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "执行和解僵局",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "技术秘密侵权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "担保",
+      "queries": 25,
+      "known_recall_at_k": 0.88,
+      "hit_at_k": 0.88
+    },
+    {
+      "field": "domain",
+      "value": "撤销之诉期间",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "方法专利侵权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "景区安全保障",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "未成年人饮酒损害",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "民事执行",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "民事诉讼",
+      "queries": 12,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "民法人格权",
+      "queries": 3,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "民法总则",
+      "queries": 4,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "民生工程执行",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "水污染预防救济",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "污染应急费用",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "汽车消费欺诈",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "海上运输变更",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "海事赔偿限额",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "消费者",
+      "queries": 11,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "涉外合同",
+      "queries": 1,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "涉外船舶碰撞",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "涉黑财物处置",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "环境公益诉权",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "生态损害赔偿程序",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "电商链接保全",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "盐业行政处罚",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "监测系统犯罪",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "监管失责赔偿",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "目的港无人提货",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "程序",
+      "queries": 1,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "竞业限制",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "第三人撤销之诉",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "继承",
+      "queries": 5,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "网络不正当竞争",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "网络著作权管辖",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "网络赌博",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "老字号与商标",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "药品方法专利",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "药物专利创造性",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "虚拟货币仲裁",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "行政",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "许可期限程序",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "账号关联数据竞争",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "购房执行异议",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "软件侵权证据",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "醉驾教唆与立功",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "采矿生态损害",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "错误执行赔偿",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "防卫过当",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "非法捕捞修复",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "非法经营罪界限",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "预防性环境公益诉讼",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "domain",
+      "value": "食品安全犯罪",
+      "queries": 2,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "style",
+      "value": "colloquial",
+      "queries": 131,
+      "known_recall_at_k": 0.916030534351145,
+      "hit_at_k": 0.916030534351145
+    },
+    {
+      "field": "style",
+      "value": "contrast",
+      "queries": 33,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "style",
+      "value": "locator",
+      "queries": 1,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    },
+    {
+      "field": "style",
+      "value": "multi_intent",
+      "queries": 7,
+      "known_recall_at_k": 0.7142857142857143,
+      "hit_at_k": 0.8571428571428571
+    },
+    {
+      "field": "style",
+      "value": "scenario",
+      "queries": 197,
+      "known_recall_at_k": 0.9949238578680203,
+      "hit_at_k": 0.9949238578680203
+    },
+    {
+      "field": "style",
+      "value": "term",
+      "queries": 7,
+      "known_recall_at_k": 1.0,
+      "hit_at_k": 1.0
+    }
+  ],
+  "rank_replay_seconds": 116.51,
+  "methods": [
+    "bm25",
+    "vector",
+    "hybrid"
+  ],
+  "groups": [
+    {
+      "collection": "law",
+      "split": "all",
+      "method": "bm25",
+      "queries": 200,
+      "k": 4,
+      "hit_at_1": 0.675,
+      "hit_at_k": 0.86,
+      "known_recall_at_k": 0.8525,
+      "mrr_at_k": 0.7608333333333334,
+      "known_ndcg_at_k": 0.7809559197581635,
+      "anchor_recall_at_k": null
+    },
+    {
+      "collection": "law",
+      "split": "all",
+      "method": "vector",
+      "queries": 200,
+      "k": 4,
+      "hit_at_1": 0.755,
+      "hit_at_k": 0.96,
+      "known_recall_at_k": 0.9466666666666667,
+      "mrr_at_k": 0.84125,
+      "known_ndcg_at_k": 0.865726805027936,
+      "anchor_recall_at_k": 0.9466666666666667
+    },
+    {
+      "collection": "law",
+      "split": "all",
+      "method": "hybrid",
+      "queries": 200,
+      "k": 4,
+      "hit_at_1": 0.755,
+      "hit_at_k": 0.935,
+      "known_recall_at_k": 0.93,
+      "mrr_at_k": 0.8341666666666666,
+      "known_ndcg_at_k": 0.8579452657359576,
+      "anchor_recall_at_k": 0.93
+    },
+    {
+      "collection": "law",
+      "split": "dev",
+      "method": "bm25",
+      "queries": 64,
+      "k": 4,
+      "hit_at_1": 0.6875,
+      "hit_at_k": 0.859375,
+      "known_recall_at_k": 0.84375,
+      "mrr_at_k": 0.7669270833333334,
+      "known_ndcg_at_k": 0.7796536777467694,
+      "anchor_recall_at_k": null
+    },
+    {
+      "collection": "law",
+      "split": "dev",
+      "method": "vector",
+      "queries": 64,
+      "k": 4,
+      "hit_at_1": 0.796875,
+      "hit_at_k": 0.984375,
+      "known_recall_at_k": 0.9609375,
+      "mrr_at_k": 0.8736979166666666,
+      "known_ndcg_at_k": 0.8887714233127493,
+      "anchor_recall_at_k": 0.9609375
+    },
+    {
+      "collection": "law",
+      "split": "dev",
+      "method": "hybrid",
+      "queries": 64,
+      "k": 4,
+      "hit_at_1": 0.734375,
+      "hit_at_k": 0.921875,
+      "known_recall_at_k": 0.90625,
+      "mrr_at_k": 0.8138020833333334,
+      "known_ndcg_at_k": 0.8358984949733548,
+      "anchor_recall_at_k": 0.90625
+    },
+    {
+      "collection": "law",
+      "split": "test",
+      "method": "bm25",
+      "queries": 136,
+      "k": 4,
+      "hit_at_1": 0.6691176470588235,
+      "hit_at_k": 0.8602941176470589,
+      "known_recall_at_k": 0.8566176470588235,
+      "mrr_at_k": 0.7579656862745098,
+      "known_ndcg_at_k": 0.7815687395282312,
+      "anchor_recall_at_k": null
+    },
+    {
+      "collection": "law",
+      "split": "test",
+      "method": "vector",
+      "queries": 136,
+      "k": 4,
+      "hit_at_1": 0.7352941176470589,
+      "hit_at_k": 0.9485294117647058,
+      "known_recall_at_k": 0.9399509803921569,
+      "mrr_at_k": 0.8259803921568627,
+      "known_ndcg_at_k": 0.8548822787762591,
+      "anchor_recall_at_k": 0.9399509803921569
+    },
+    {
+      "collection": "law",
+      "split": "test",
+      "method": "hybrid",
+      "queries": 136,
+      "k": 4,
+      "hit_at_1": 0.7647058823529411,
+      "hit_at_k": 0.9411764705882353,
+      "known_recall_at_k": 0.9411764705882353,
+      "mrr_at_k": 0.84375,
+      "known_ndcg_at_k": 0.8683202166830648,
+      "anchor_recall_at_k": 0.9411764705882353
+    },
+    {
+      "collection": "case",
+      "split": "all",
+      "method": "bm25",
+      "queries": 176,
+      "k": 2,
+      "hit_at_1": 0.9886363636363636,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.9943181818181818,
+      "known_ndcg_at_k": 0.9958060199269484,
+      "anchor_recall_at_k": null
+    },
+    {
+      "collection": "case",
+      "split": "all",
+      "method": "vector",
+      "queries": 176,
+      "k": 2,
+      "hit_at_1": 0.9488636363636364,
+      "hit_at_k": 0.9886363636363636,
+      "known_recall_at_k": 0.9886363636363636,
+      "mrr_at_k": 0.96875,
+      "known_ndcg_at_k": 0.973957433380683,
+      "anchor_recall_at_k": 0.6193181818181818
+    },
+    {
+      "collection": "case",
+      "split": "all",
+      "method": "hybrid",
+      "queries": 176,
+      "k": 2,
+      "hit_at_1": 0.9602272727272727,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.9801136363636364,
+      "known_ndcg_at_k": 0.9853210697443193,
+      "anchor_recall_at_k": 0.6306818181818182
+    },
+    {
+      "collection": "case",
+      "split": "dev",
+      "method": "bm25",
+      "queries": 75,
+      "k": 2,
+      "hit_at_1": 1.0,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "known_ndcg_at_k": 1.0,
+      "anchor_recall_at_k": null
+    },
+    {
+      "collection": "case",
+      "split": "dev",
+      "method": "vector",
+      "queries": 75,
+      "k": 2,
+      "hit_at_1": 0.92,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.96,
+      "known_ndcg_at_k": 0.9704743802857166,
+      "anchor_recall_at_k": 0.5866666666666667
+    },
+    {
+      "collection": "case",
+      "split": "dev",
+      "method": "hybrid",
+      "queries": 75,
+      "k": 2,
+      "hit_at_1": 0.9333333333333333,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.9666666666666667,
+      "known_ndcg_at_k": 0.9753953169047638,
+      "anchor_recall_at_k": 0.5866666666666667
+    },
+    {
+      "collection": "case",
+      "split": "test",
+      "method": "bm25",
+      "queries": 101,
+      "k": 2,
+      "hit_at_1": 0.9801980198019802,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.9900990099009901,
+      "known_ndcg_at_k": 0.9926916782885438,
+      "anchor_recall_at_k": null
+    },
+    {
+      "collection": "case",
+      "split": "test",
+      "method": "vector",
+      "queries": 101,
+      "k": 2,
+      "hit_at_1": 0.9702970297029703,
+      "hit_at_k": 0.9801980198019802,
+      "known_recall_at_k": 0.9801980198019802,
+      "mrr_at_k": 0.9752475247524752,
+      "known_ndcg_at_k": 0.9765438589462521,
+      "anchor_recall_at_k": 0.6435643564356436
+    },
+    {
+      "collection": "case",
+      "split": "test",
+      "method": "hybrid",
+      "queries": 101,
+      "k": 2,
+      "hit_at_1": 0.9801980198019802,
+      "hit_at_k": 1.0,
+      "known_recall_at_k": 1.0,
+      "mrr_at_k": 0.9900990099009901,
+      "known_ndcg_at_k": 0.9926916782885438,
+      "anchor_recall_at_k": 0.6633663366336634
+    }
+  ],
+  "controls": [
+    {
+      "method": "bm25",
+      "withdrawn_queries": 6,
+      "withdrawn_leak_queries": 0,
+      "no_answer_queries": 18,
+      "nonempty_no_answer_queries": 15
+    },
+    {
+      "method": "vector",
+      "withdrawn_queries": 6,
+      "withdrawn_leak_queries": 0,
+      "no_answer_queries": 18,
+      "nonempty_no_answer_queries": 18
+    },
+    {
+      "method": "hybrid",
+      "withdrawn_queries": 6,
+      "withdrawn_leak_queries": 0,
+      "no_answer_queries": 18,
+      "nonempty_no_answer_queries": 18
+    }
+  ],
+  "note": "固定已有检索逻辑；真实查询向量缓存重放，未调用语言模型。法条k=4、案例k=2。指标针对已标注相关来源，不把未标注候选当作已判不相关。耗时排除API向量生成，非线上延迟。"
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "query": "首次违法且危害后果轻微并及时改正，行政处罚法是否允许不予处罚？",
+    "expected_ids": [
+      "Lf8e2c75d89338c50c1ecA33"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "行政强制法中，加处罚款或者滞纳金每日计收，累计金额能超过金钱给付义务金额吗？",
+    "expected_ids": [
+      "L54d67cd681311f89ec0aA45"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "刑法第二百五十三条之一如何规定侵犯公民个人信息罪？",
+    "expected_ids": [
+      "Le77a26b6457ec7d484f3A253Z1"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "刑事诉讼法关于未经人民法院依法判决不得确定任何人有罪的规定。",
+    "expected_ids": [
+      "L508b30cb208317b69c94A12"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "企业破产法规定债权人对债务人不能清偿到期债务能否申请破产清算？",
+    "expected_ids": [
+      "L7b713ec8e8b090bb0747A7"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "安全生产法规定生产经营单位的主要负责人对本单位安全生产工作承担什么责任？",
+    "expected_ids": [
+      "Le07e4ce5ac45a42e5848A5"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "行政复议法规定公民申请行政复议的一般期限是多少天？",
+    "expected_ids": [
+      "L58eee1b867a15ef1ddc3A20"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "电子商务法对电子商务经营者处理消费者个人信息的义务如何规定？",
+    "expected_ids": [
+      "L30a1c655bfec20688f6cA23"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "个人申请获取政府信息公开，一般应在多少个工作日内答复？",
+    "expected_ids": [
+      "Rae3d8764396d44685dcaA33"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "工伤保险条例规定劳动者在工作时间和工作场所内因工作原因受到事故伤害如何认定？",
+    "expected_ids": [
+      "R97d3f7aafaba12eed14dA14"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "劳动合同法实施条例规定达到法定退休年龄时劳动合同是否终止？",
+    "expected_ids": [
+      "Rc22dd28fa28377b5c1c0A21"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "食品安全法规定生产经营不符合食品安全标准的食品时消费者能否主张十倍价款赔偿？",
+    "expected_ids": [
+      "L3ac23b9ca817fd68740dA148"
+    ],
+    "kind": "law",
+    "label_source": "人工预先指定规范及条号；未穷尽全部相关法条"
+  },
+  {
+    "query": "案例一 曹某某拒不执行判决、裁定案",
+    "expected_ids": [
+      "CT100102N1"
+    ],
+    "kind": "case",
+    "label_source": "案名定位诊断，查询直接使用已存案名"
+  },
+  {
+    "query": "案例二 施某某拒不执行判决、裁定案",
+    "expected_ids": [
+      "CT100102N2"
+    ],
+    "kind": "case",
+    "label_source": "案名定位诊断，查询直接使用已存案名"
+  },
+  {
+    "query": "案例三 李某彬拒不执行判决、裁定案",
+    "expected_ids": [
+      "CT100102N3"
+    ],
+    "kind": "case",
+    "label_source": "案名定位诊断，查询直接使用已存案名"
+  },
+  {
+    "query": "案例四 林某某拒不执行判决、裁定案",
+    "expected_ids": [
+      "CT100102N4"
+    ],
+    "kind": "case",
+    "label_source": "案名定位诊断，查询直接使用已存案名"
+  },
+  {
+    "query": "案例五 周某某拒不执行判决案",
+    "expected_ids": [
+      "CT100102N5"
+    ],
+    "kind": "case",
+    "label_source": "案名定位诊断，查询直接使用已存案名"
+  },
+  {
+    "query": "案例六 肖某某非法处置查封的财产案",
+    "expected_ids": [
+      "CT100102N6"
+    ],
+    "kind": "case",
+    "label_source": "案名定位诊断，查询直接使用已存案名"
+  }
+]

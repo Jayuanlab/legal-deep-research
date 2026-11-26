@@ -1,0 +1,42 @@
+import json,hashlib
+from pathlib import Path
+from collections import Counter
+from official_bulk import dump
+ROOT=Path(__file__).parent;DATA=ROOT/'data'
+r=json.loads((DATA/'validity-all-report.json').read_text(encoding='utf-8'))
+ui=json.loads((DATA/'validity-all-ui-validation.json').read_text(encoding='utf-8'))
+retrieval=json.loads((DATA/'validity-all-retrieval-validation.json').read_text(encoding='utf-8'))
+assert ui['passed'] and retrieval['passed']
+testlog=(ROOT/'validity-all-tests.log').read_text(encoding='utf-8')
+assert 'Ran 111 tests' in testlog and testlog.rstrip().endswith('OK')
+ledger=json.loads((DATA/'validity-all-ledger.json').read_text(encoding='utf-8'))
+c=r['counts'];pending=[];seen=set()
+for p in r['pending_matches']:
+ key=(p.get('name'),p.get('version'),p.get('reason'))
+ if key not in seen:seen.add(key);pending.append(p)
+lines=['# 全库效力扫描与官方依据核验','',
+ '截至2026-11-13，逐一纳入本轮扫描的法规资料为52,995条，涉及1,204个“名称＋版本＋来源URL”组合、1,138个规范名称。每个来源版本都在`validity-all-ledger.json`中有核验结果，包括未找到足够依据的记录。',
+ '', '本轮完成的是全库逐版本扫描和对已归档官方决定的证据比对；没有宣称1,204个版本均已穷尽网上查证或完成法律专业终审。待核验不等于有效。',
+ '', '| 当前效力标签 | 条目数 | 默认研究处理 |','| --- | ---: | --- |',
+ f"| 已废止／失效 | {c['repealed']:,} | 排除当前研究召回，仍可浏览原文与依据 |",
+ f"| 部分条款失效 | {c['partially_repealed']:,} | 明确到条、款或删除范围；完整历史条文保守排除 |",
+ f"| 已修改的历史版本 | {c['superseded']:,} | 标明旧版本，排除当前研究召回 |",
+ f"| 尚未施行 | {c['not_yet_effective']:,} | 保留单独标签，沿用排除 |",
+ f"| 效力存疑 | {c['needs_review']:,} | 保留待核验及原有排除 |",
+ f"| 效力待核验 | {c['unknown']:,} | 不认定有效，也不因猜测直接废止 |",
+ '', '相对于首轮标记，新增2,219条不再进入当前研究召回。条目数是法条或全文记录数，不是独立规范部数；同一发布版本可同时包含“历史版本”和“部分失效”条目，不能简单相加版本类别数。',
+ '', '## 依据与匹配方式', '',
+ '来源包括最高法院已存档的修改、废止决定，以及补充下载的官方司法解释清理决定、国务院修改废止决定、2026年11月修改十五部法律的决定等。原始响应、URL、哈希与解析文本保存在`raw/bulk/validity/parsed/`及每项规则指向的原文路径。证据只用于建库核验，研究阶段仍不联网搜索。',
+ '', '废止清单按完整规范名称和文号匹配；实施细则中的引用不用于把被引用的法律标为失效。修改决定同时核对原发布版本的通过、修正或文号年份，不能仅据网页日期推定旧版。2020年修改、2021年施行的决定，不会将2020年修正后的文本误标成旧版；同年无法区分先后、缺少明确版本证据时保留待核验。',
+ '', '部分废止与删除记录保留具体条款范围及逐字依据，不将整部规范宣称废止。每条已确认规则绑定原文哈希、来源哈希和版本字段，资料发生变化后原标记不能直接沿用。历史案件可能适用旧法，本轮没有实现按案件日期自动选取历史版本。',
+ '', '## 未决项', '',
+ f"核验中保留了{len(r['pending_matches'])}条具体待核对匹配记录（去重后{len(pending)}项），详见`validity-all-report.json`。例如部分法院废止决定网页只有正文或图片附件，缺少可可靠解析的完整目录；未据此批量标记。",
+ '', '其他未匹配到明确依据的来源版本逐项列在ledger中，保持待核验。标记旧版不代表替代版本已入研究库；当前库缺少替代证据时，应由既有证据不足流程处理，不能回退引用已排除版本。',
+ '', '## 验证与可回溯性', '',
+ '111项后端测试通过，覆盖完整标题匹配、版本错配、部分废止范围、当前修正文不误标、覆盖层重建、来源哈希及状态筛选。桌面检查通过，验证全部效力分类可筛选并可展开查看依据，截图为项目根目录`validity-all-desktop.png`。',
+ '', f"一次真实阿里云向量＋本地混合召回检查通过，耗时{retrieval['seconds']}秒，未返回已废止、部分失效或历史版本记录；本次问题仍召回民法典及其他可用来源。不代表所有问题都已完成回归评测。",
+ '', '原55,180条法条与案例资料的正文、条号、来源和内容哈希保持不变，55,636个向量分片仍就绪，研究记录未改。修改前的资料、效力规则和评测标签快照在`evaluation/archives/before-validity-all-20261113/`。400题正例未与新增排除冲突，逐条锚点校验通过，问法、qrel和分组未改；候选库指纹已更新，未重跑400题，不沿用旧成绩作为本轮成绩。',
+ '', '后续可重新运行`audit_validity_all.py`生成提案，人工核对后用`apply_validity_all.py`更新覆盖层。历史首轮脚本已加保护，不能覆盖本轮全库结果。', '']
+(DATA/'VALIDITY-ALL.md').write_text('\n'.join(lines),encoding='utf-8')
+dump(DATA/'validity-all-validation.json',dict(tests=111,failures=0,errors=0,ledger_versions=len(ledger),ledger_records=sum(x['records'] for x in ledger),ui_passed=True,retrieval_passed=True,vectors_ready=r['vectors']['ready'],text_changed=False))
+print('Wrote full inventory report and validation summary')

@@ -1,0 +1,30 @@
+{
+  "version": "retrieval-v2",
+  "rows": 400,
+  "laws": 200,
+  "cases": 176,
+  "controls": 24,
+  "dataset_sha256": "ec3a4c295bc5db75ac123d7e1affde980df652ce5846526e665dcb4a51370492",
+  "corpus_sha256": "857f0e51af98452908068b8f18db5e8a74d40fd535c2c0ec7912be9271b6aed0",
+  "corpus_counts": {
+    "law": 52995,
+    "case": 2185
+  },
+  "split_counts": {
+    "dev": 139,
+    "test": 237,
+    "control": 24
+  },
+  "cohort_counts": {
+    "regression_v1": 80,
+    "expansion_v2": 320
+  },
+  "unique_qrel_sources": {
+    "law": 118,
+    "case": 100
+  },
+  "labeling": "原文锚点校验与来源核对，未经独立法律专家穷尽相关性评审；查询非被测语言模型生成，未使用自动模型评分",
+  "split_policy": "保留v1全部原题和分组；共享任一qrel的查询按来源连通分量分组，dev/test无qrel交集。新增题由同一来源两种问法构成，题数不能当作独立来源数。新题单独标记expansion_v2。",
+  "corpus_revision": "validity-all-20261113",
+  "corpus_revision_note": "全库1204来源版本扫描；新增废止、部分失效和已修改历史版本标记并排除当前研究召回。400题问法、qrel、分组保持且锚点校验通过；未重跑400题，旧成绩不代表本轮成绩。"
+}

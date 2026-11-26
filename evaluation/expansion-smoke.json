@@ -1,0 +1,203 @@
+{
+  "queries": 16,
+  "hits": 16,
+  "rows": [
+    {
+      "query": "用人单位与劳动者约定不缴纳社会保险费，劳动者能否解除劳动合同并请求经济补偿？",
+      "expected": "E28019",
+      "collection": "law",
+      "candidates": [
+        "E28019",
+        "E21100",
+        "E28012",
+        "E27038"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "劳动者没有接触商业秘密，劳动合同约定的竞业限制条款是否对他生效？",
+      "expected": "E28013",
+      "collection": "law",
+      "candidates": [
+        "E28013",
+        "E28014",
+        "E20023",
+        "E20024"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "民间借贷约定利率的司法保护上限是否为合同成立时一年期LPR的四倍？",
+      "expected": "E30025",
+      "collection": "law",
+      "candidates": [
+        "E30025",
+        "E30028",
+        "E30029",
+        "E30027"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "微信聊天记录、电子邮件和即时通信信息能否作为民事诉讼电子数据？",
+      "expected": "E29014",
+      "collection": "law",
+      "candidates": [
+        "E29014",
+        "E29094",
+        "E29093",
+        "E29015"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "控制证据的一方无正当理由拒不提交，可以推定该证据对其不利吗？",
+      "expected": "E29095",
+      "collection": "law",
+      "candidates": [
+        "E29095",
+        "E29048",
+        "E29066",
+        "E29031"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "人脸识别信息处理发生在司法解释2021年8月1日施行前，是否适用该解释？",
+      "expected": "E33016",
+      "collection": "law",
+      "candidates": [
+        "E33016",
+        "E33003",
+        "E33001",
+        "E33013"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "夫妻离婚协议约定将共同财产给子女，一方能否在转移财产前撤销约定？",
+      "expected": "E34020",
+      "collection": "law",
+      "candidates": [
+        "E34020",
+        "E34003",
+        "E1092",
+        "E34007"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "实际施工人以发包人为被告主张工程价款，发包人的责任范围如何确定？",
+      "expected": "E36043",
+      "collection": "law",
+      "candidates": [
+        "E36043",
+        "E36015",
+        "E36044",
+        "E36042"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "民法典施行前的法律事实引起的民事纠纷，应适用哪一时期的法律？",
+      "expected": "E37001",
+      "collection": "law",
+      "candidates": [
+        "E37002",
+        "E37001",
+        "E37004",
+        "E37003"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "禁止饲养的烈性犬致人损害，饲养人能否主张减轻责任？",
+      "expected": "E32023",
+      "collection": "law",
+      "candidates": [
+        "E32023",
+        "E1247",
+        "E1245",
+        "E1246"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "找朱某与某保安公司的劳动争议典型案例，约定不缴社保后解除劳动合同经济补偿。",
+      "expected": "T20006",
+      "collection": "case",
+      "candidates": [
+        "T20006",
+        "T20003"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "中标通知书到达后拒签书面合同，某物业管理公司与某研究所房屋租赁合同纠纷案。",
+      "expected": "T20101",
+      "collection": "case",
+      "candidates": [
+        "T20101",
+        "T20110"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "张某等人因差评被商家擅自公开个人信息，网络侵权责任的典型案例。",
+      "expected": "T20202",
+      "collection": "case",
+      "candidates": [
+        "T20202",
+        "T20305"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "马某诉某公司过度收集消费者个人信息，网络服务提供者侵权责任典型案例。",
+      "expected": "T20305",
+      "collection": "case",
+      "candidates": [
+        "T20305",
+        "T20202"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "平台代运营商组织虚假交易导致严重违约，平台依约扣除保证金的典型案例。",
+      "expected": "T20403",
+      "collection": "case",
+      "candidates": [
+        "T20403",
+        "T20402"
+      ],
+      "hit": true,
+      "exact_spans": true
+    },
+    {
+      "query": "博某软件公司在维护医院挂号系统时非法获取患者个人信息，侵犯公民个人信息案。",
+      "expected": "T20501",
+      "collection": "case",
+      "candidates": [
+        "T20501",
+        "C1194"
+      ],
+      "hit": true,
+      "exact_spans": true
+    }
+  ],
+  "scope": "新增资料的小样本检索诊断，非独立法律专家标注的全面评测，不等同法律回答正确率。全部使用真实阿里云查询向量；原文片段逐一核对。"
+}

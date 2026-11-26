@@ -1,0 +1,319 @@
+{
+  "queries": 18,
+  "hits": 18,
+  "rows": [
+    {
+      "query": "首次违法且危害后果轻微并及时改正，行政处罚法是否允许不予处罚？",
+      "expected_ids": [
+        "Lf8e2c75d89338c50c1ecA33"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "Lf8e2c75d89338c50c1ecA33",
+        "Lf8e2c75d89338c50c1ecA32",
+        "R08e943e20032d684d555A51",
+        "Lf8e2c75d89338c50c1ecA57"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 17.11
+    },
+    {
+      "query": "行政强制法中，加处罚款或者滞纳金每日计收，累计金额能超过金钱给付义务金额吗？",
+      "expected_ids": [
+        "L54d67cd681311f89ec0aA45"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "L54d67cd681311f89ec0aA45",
+        "L54d67cd681311f89ec0aA46",
+        "Lf8e2c75d89338c50c1ecA72",
+        "L54d67cd681311f89ec0aA42"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.83
+    },
+    {
+      "query": "刑法第二百五十三条之一如何规定侵犯公民个人信息罪？",
+      "expected_ids": [
+        "Le77a26b6457ec7d484f3A253Z1"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "J43942A3",
+        "J43942A2",
+        "Le77a26b6457ec7d484f3A253Z1",
+        "J43942A7"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.2
+    },
+    {
+      "query": "刑事诉讼法关于未经人民法院依法判决不得确定任何人有罪的规定。",
+      "expected_ids": [
+        "L508b30cb208317b69c94A12"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "L508b30cb208317b69c94A12",
+        "L508b30cb208317b69c94A200",
+        "J286491A223",
+        "L508b30cb208317b69c94A6"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.79
+    },
+    {
+      "query": "企业破产法规定债权人对债务人不能清偿到期债务能否申请破产清算？",
+      "expected_ids": [
+        "L7b713ec8e8b090bb0747A7"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "L7b713ec8e8b090bb0747A7",
+        "J3158A2",
+        "J3158A6",
+        "L7b713ec8e8b090bb0747A2"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.16
+    },
+    {
+      "query": "安全生产法规定生产经营单位的主要负责人对本单位安全生产工作承担什么责任？",
+      "expected_ids": [
+        "Le07e4ce5ac45a42e5848A5"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "Le07e4ce5ac45a42e5848A21",
+        "Le07e4ce5ac45a42e5848A5",
+        "Le07e4ce5ac45a42e5848A94",
+        "Le07e4ce5ac45a42e5848A25"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.46
+    },
+    {
+      "query": "行政复议法规定公民申请行政复议的一般期限是多少天？",
+      "expected_ids": [
+        "L58eee1b867a15ef1ddc3A20"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "L58eee1b867a15ef1ddc3A20",
+        "L98a6cff9ea319831fe04A49",
+        "R666de4b4737137bbfdedA25",
+        "L98a6cff9ea319831fe04A17"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.07
+    },
+    {
+      "query": "电子商务法对电子商务经营者处理消费者个人信息的义务如何规定？",
+      "expected_ids": [
+        "L30a1c655bfec20688f6cA23"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "L30a1c655bfec20688f6cA5",
+        "L30a1c655bfec20688f6cA23",
+        "L30a1c655bfec20688f6cA17",
+        "L30a1c655bfec20688f6cA18"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.29
+    },
+    {
+      "query": "个人申请获取政府信息公开，一般应在多少个工作日内答复？",
+      "expected_ids": [
+        "Rae3d8764396d44685dcaA33"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "Rae3d8764396d44685dcaA33",
+        "Rae3d8764396d44685dcaA30",
+        "Rae3d8764396d44685dcaA29",
+        "Rae3d8764396d44685dcaA35"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.28
+    },
+    {
+      "query": "工伤保险条例规定劳动者在工作时间和工作场所内因工作原因受到事故伤害如何认定？",
+      "expected_ids": [
+        "R97d3f7aafaba12eed14dA14"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "R97d3f7aafaba12eed14dA14",
+        "R97d3f7aafaba12eed14dA15",
+        "R97d3f7aafaba12eed14dA1",
+        "R97d3f7aafaba12eed14dA65"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.66
+    },
+    {
+      "query": "劳动合同法实施条例规定达到法定退休年龄时劳动合同是否终止？",
+      "expected_ids": [
+        "Rc22dd28fa28377b5c1c0A21"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "Rc22dd28fa28377b5c1c0A21",
+        "Rc22dd28fa28377b5c1c0A13",
+        "Rc22dd28fa28377b5c1c0A23",
+        "Rc22dd28fa28377b5c1c0A22"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.11
+    },
+    {
+      "query": "食品安全法规定生产经营不符合食品安全标准的食品时消费者能否主张十倍价款赔偿？",
+      "expected_ids": [
+        "L3ac23b9ca817fd68740dA148"
+      ],
+      "kind": "law",
+      "label_source": "人工预先指定规范及条号；未穷尽全部相关法条",
+      "candidates": [
+        "L3ac23b9ca817fd68740dA148",
+        "J278191A7",
+        "J6042A15",
+        "J440841A12"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 16.49
+    },
+    {
+      "query": "案例一 曹某某拒不执行判决、裁定案",
+      "expected_ids": [
+        "CT100102N1"
+      ],
+      "kind": "case",
+      "label_source": "案名定位诊断，查询直接使用已存案名",
+      "candidates": [
+        "CT100102N1",
+        "CT100102N7"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 15.51
+    },
+    {
+      "query": "案例二 施某某拒不执行判决、裁定案",
+      "expected_ids": [
+        "CT100102N2"
+      ],
+      "kind": "case",
+      "label_source": "案名定位诊断，查询直接使用已存案名",
+      "candidates": [
+        "CT100102N2",
+        "CT100102N7"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 15.76
+    },
+    {
+      "query": "案例三 李某彬拒不执行判决、裁定案",
+      "expected_ids": [
+        "CT100102N3"
+      ],
+      "kind": "case",
+      "label_source": "案名定位诊断，查询直接使用已存案名",
+      "candidates": [
+        "CT100102N3",
+        "CT453101N5"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 15.78
+    },
+    {
+      "query": "案例四 林某某拒不执行判决、裁定案",
+      "expected_ids": [
+        "CT100102N4"
+      ],
+      "kind": "case",
+      "label_source": "案名定位诊断，查询直接使用已存案名",
+      "candidates": [
+        "CT100102N4",
+        "CT100102N7"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 15.73
+    },
+    {
+      "query": "案例五 周某某拒不执行判决案",
+      "expected_ids": [
+        "CT100102N5"
+      ],
+      "kind": "case",
+      "label_source": "案名定位诊断，查询直接使用已存案名",
+      "candidates": [
+        "CT100102N5",
+        "CT100102N1"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 15.33
+    },
+    {
+      "query": "案例六 肖某某非法处置查封的财产案",
+      "expected_ids": [
+        "CT100102N6"
+      ],
+      "kind": "case",
+      "label_source": "案名定位诊断，查询直接使用已存案名",
+      "candidates": [
+        "CT100102N6",
+        "CT15043N9"
+      ],
+      "hit": true,
+      "source_present": true,
+      "exact_spans": true,
+      "elapsed": 15.33
+    }
+  ],
+  "scope": "真实阿里云查询向量与生产RRF检索。12题预先指定法条诊断+6题案名定位，不是完整400题重评或法律回答正确率；保留未命中记录。"
+}

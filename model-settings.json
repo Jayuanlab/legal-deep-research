@@ -1,0 +1,8 @@
+{
+  "embedding": {
+    "provider": "aliyun",
+    "model": "text-embedding-v4",
+    "dimensions": 1024,
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  }
+}
